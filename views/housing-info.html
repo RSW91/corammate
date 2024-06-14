@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>CoramMate - Housing Information</title>
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/slick.css"/>
+    <link href="css/tooplate-little-fashion.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2gZ0K/ZGpHT8gN4f9o5i6EGTQ7EWs5hPrdP5C4I7eNqC9Z4j8Nybx2n5XPs4xaIsn9VSSZg==" crossorigin=""/>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .navbar {
+            transition: top 0.3s;
+        }
+        .navbar.hide {
+            top: -100px;
+        }
+
+        .container h2 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .container h3 {
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        #map {
+            height: 500px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .content-section {
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .card {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: none;
+            border-radius: 10px;
+        }
+
+        .navbar, .navbar * {
+            background-color: transparent !important;
+        }
+
+        .header-spacing {
+            margin-top: 60px; /* 제목과 네비게이션 바 간격 */
+        }
+
+        #coramfluencer-info {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="preloader">
+        <div class="spinner">
+            <span class="sk-inner-circle"></span>
+        </div>
+    </section>
+
+    <main>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <strong>Coram<span>Mate</span></strong>
+                </a>
+                <div class="d-lg-none">
+                    <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="community.html">Community</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="housing-info.html">Housing</a>
+                        </li>
+                    </ul>
+                    <div class="d-none d-lg-block">
+                        <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="container content-section header-spacing">
+            <h2>Housing Information</h2>
+            <p>Welcome to the housing information section. Here you can find details about both online and offline housing services offered by our platform.</p>
+            <h3>Online Services</h3>
+            <p>Our online services include virtual tours, online applications, and digital contracts. You can explore housing options from the comfort of your home.</p>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="images/product/jordan-nix-CkCUvwMXAac-unsplash.jpeg" class="card-img-top" alt="Online Service 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Virtual Tours</h5>
+                            <p class="card-text">Explore properties online with our immersive virtual tours. See every detail of your future home from the comfort of your current one.</p>
+                            <a href="#" class="btn btn-primary">Start Tour</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="images/product/nature-zen-3Dn1BZZv3m8-unsplash.jpeg" class="card-img-top" alt="Online Service 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Online Applications</h5>
+                            <p class="card-text">Apply for housing online quickly and easily. Our streamlined process ensures you can secure your new home without hassle.</p>
+                            <a href="#" class="btn btn-primary">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="images/product/team-fredi-8HRKoay8VJE-unsplash.jpeg" class="card-img-top" alt="Online Service 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Digital Contracts</h5>
+                            <p class="card-text">Sign contracts digitally and save time. Our secure system ensures your information is protected every step of the way.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>Offline Services</h3>
+            <p>Our offline services include in-person visits and consultations. Use the map below to locate our housing offices and available properties.</p>
+            <div id="map"></div>
+            <div id="coramfluencer-info"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 CoramMate. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-1DeR2lf8KZehlb3RzBAGn6gGZzBdMfmkbcGi04CMjHKbtD1OEVbgSMeN3FvnQlvAflSAwA4vPZrxhZTVrzhVgA==" crossorigin=""></script>
+</body>
+</html>

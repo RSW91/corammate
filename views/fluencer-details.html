@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>CoramMate - Fluencer Details</title>
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/slick.css"/>
+    <link href="css/tooplate-little-fashion.css" rel="stylesheet">
+    <style>
+        .fluencer-details { margin-top: 20px; }
+        .fluencer-photo { max-width: 200px; margin-bottom: 20px; }
+        .story-section, .services-section { margin-top: 40px; }
+        .service-card { margin-bottom: 20px; }
+    </style>
+</head>
+
+<body>
+    <main>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <strong>Coram<span>Mate</span></strong>
+                </a>
+                <div class="d-lg-none">
+                    <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="community.html">Community</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="d-none d-lg-block">
+                        <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="fluencer-details section-padding">
+            <div class="container">
+                <div id="fluencerContent">
+                    <!-- Fluencer 정보는 JavaScript를 통해 동적으로 추가됩니다. -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-10 me-auto mb-4">
+                    <h4 class="text-white mb-3"><a href="index.html">Coram<span>Mate</span></h4>
+                    <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2023 CoramMate
+                    <br>Custom template by <a href="https://www.tooplate.com/">Tooplate</a></p>
+                </div>
+                <div class="col-lg-5 col-8">
+                    <h5 class="text-white mb-3">Sitemap</h5>
+                    <ul class="footer-menu d-flex flex-wrap">
+                        <li class="footer-menu-item">
+                            <a href="about.html" class="footer-menu-link">About</a>
+                        </li>
+                        <li class="footer-menu-item">
+                            <a href="services.html" class="footer-menu-link">Services</a>
+                        </li>
+                        <li class="footer-menu-item">
+                            <a href="community.html" class="footer-menu-link">Community</a>
+                        </li>
+                        <li class="footer-menu-item">
+                            <a href="contact.html" class="footer-menu-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-4">
+                    <h5 class="text-white mb-3">Social</h5>
+                    <ul class="social-icon">
+                        <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+                        <li><a href="#" class="social-icon-link bi-whatsapp"></a></li>
+                        <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+                        <li><a href="#" class="social-icon-link bi-skype"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fluencers = {
+                1: {
+                    name: 'Michael Lee',
+                    photo: 'michael.jpg',
+                    intro: 'Yongsan housing expert.',
+                    story: 'Michael has helped over 100 clients find their dream homes in Yongsan. His expertise in local market trends and his commitment to client satisfaction make him a trusted advisor.',
+                    services: [
+                        { name: 'Property Consultation', type: 'Offline', price: '$300' },
+                        { name: 'Virtual Tour', type: 'Online', price: '$150' }
+                    ]
+                },
+                2: {
+                    name: 'Sarah Park',
+                    photo: 'sarah.jpg',
+                    intro: 'Yongsan property specialist.',
+                    story: 'Sarah is known for her in-depth knowledge of the Yongsan real estate market. She has successfully closed numerous deals, always ensuring her clients get the best possible service.',
+                    services: [
+                        { name: 'Home Staging', type: 'Offline', price: '$500' },
+                        { name: 'Online Consultation', type: 'Online', price: '$200' }
+                    ]
+                }
+            };
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const fluencerId = urlParams.get('id');
+            const fluencer = fluencers[fluencerId];
+
+            if (fluencer) {
+                const fluencerContent = document.getElementById('fluencerContent');
+                fluencerContent.innerHTML = `
+                    <div class="text-center">
+                        <img src="images/${fluencer.photo}" alt="${fluencer.name}" class="fluencer-photo">
+                        <h1>${fluencer.name}</h1>
+                        <p>${fluencer.intro}</p>
+                    </div>
+                    <section class="story-section">
+                        <h2>About ${fluencer.name}</h2>
+                        <p>${fluencer.story}</p>
+                    </section>
+                    <section class="services-section">
+                        <h2>Services Offered</h2>
+                        <div class="row">
+                            ${fluencer.services.map(service => `
+                                <div class="col-lg-4 col-md-6 col-12 service-card">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">${service.name}</h5>
+                                            <p class="card-text">${service.type}</p>
+                                            <p class="card-text">${service.price}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </section>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

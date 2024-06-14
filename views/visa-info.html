@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>CoramMate - Visa & Immigration Info</title>
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/slick.css"/>
+        <link href="css/tooplate-little-fashion.css" rel="stylesheet">
+        <style>
+            .visa-hero {
+                background-image: url('images/visa-bg.jpg');
+                background-size: cover;
+                background-position: center;
+                height: 500px;
+                display: flex;
+                align-items: center;
+            }
+            .visa-hero h1 {
+                color: #fff;
+                font-size: 48px;
+                font-weight: 700;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .visa-hero p {
+                color: #fff;
+                font-size: 24px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .visa-type {
+                position: relative;
+                overflow: hidden;
+            }
+            .visa-type img {
+                transition: transform 0.3s ease;
+            }
+            .visa-type:hover img {
+                transform: scale(1.1);
+            }
+            .visa-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.6);
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+            .visa-type:hover .visa-overlay {
+                opacity: 1;
+            }
+            .visa-overlay h3 {
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            .visa-overlay p {
+                font-size: 16px;
+                text-align: center;
+            }
+            .influencer-card {
+                border: none;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+            .influencer-card:hover {
+                transform: translateY(-5px);
+            }
+            .influencer-card img {
+                height: 200px;
+                object-fit: cover;
+            }
+            .influencer-card .card-body {
+                padding: 20px;
+            }
+            .influencer-card .card-title {
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            .influencer-card .card-text {
+                font-size: 16px;
+                color: #666;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <section class="preloader">
+            <div class="spinner">
+                <span class="sk-inner-circle"></span>
+            </div>
+        </section>
+    
+        <main>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <strong>Coram<span>Mate</span></strong>
+                    </a>
+                    <div class="d-lg-none">
+                        <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="community.html">Community</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                        <div class="d-none d-lg-block">
+                            <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
+            <section class="visa-hero">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h1>비자 및 체류 정보</h1>
+                            <p>CoramMate와 함께 한국 체류에 필요한 정보를 확인하세요!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h2 class="mb-5">비자 종류별 안내</h2>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="visa-type">
+                                <img src="images/student-visa.jpg" alt="학생 비자" class="img-fluid">
+                                <div class="visa-overlay">
+                                    <h3>학생 비자</h3>
+                                    <p>한국에서 학업을 목적으로 체류하는 경우</p>
+                                    <a href="#" class="btn custom-btn">자세히 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="visa-type">
+                                <img src="images/work-visa.jpg" alt="취업 비자" class="img-fluid">
+                                <div class="visa-overlay">
+                                    <h3>취업 비자</h3>
+                                    <p>한국 기업에 취업하여 근무하는 경우</p>
+                                    <a href="#" class="btn custom-btn">자세히 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="visa-type">
+                                <img src="images/marriage-visa.jpg" alt="결혼이민 비자" class="img-fluid">
+                                <div class="visa-overlay">
+                                    <h3>결혼이민 비자</h3>
+                                    <p>한국인과 결혼하여 한국에 거주하는 경우</p>
+                                    <a href="#" class="btn custom-btn">자세히 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="visa-type">
+                                <img src="images/business-visa.jpg" alt="투자 비자" class="img-fluid">
+                                <div class="visa-overlay">
+                                    <h3>투자 비자</h3>
+                                    <p>일정 금액 이상을 한국에 투자하는 경우</p>
+                                    <a href="#" class="btn custom-btn">자세히 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="visa-type">
+                                <img src="images/permanent-residency.jpg" alt="영주권" class="img-fluid">
+                                <div class="visa-overlay">
+                                    <h3>영주권</h3>
+                                    <p>한국에 장기 거주할 수 있는 자격</p>
+                                    <a href="#" class="btn custom-btn">자세히 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="visa-type">
+                                <img src="images/visa-extension.jpg" alt="비자 연장" class="img-fluid">
+                                <div class="visa-overlay">
+                                    <h3>비자 연장</h3>
+                                    <p>비자 만료 전 연장 신청 방법 안내</p>
+                                    <a href="#" class="btn custom-btn">자세히 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section-padding bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h2 class="mb-5">Coramfluencer의 비자 및 체류 팁</h2>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card influencer-card">
+                                <img src="images/influencer1.jpg" alt="Coramfluencer 1" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">김지영 Coramfluencer</h4>
+                                    <p class="card-text">학생 비자로 한국에서 유학하며 겪은 경험을 공유합니다. 비자 신청부터 학교 생활까지 유용한 정보를 알려드려요!</p>
+                                    <a href="#" class="btn custom-btn">팁 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card influencer-card">
+                                <img src="images/influencer2.jpg" alt="Coramfluencer 2" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">박민수 Coramfluencer</h4>
+                                    <p class="card-text">한국에서 취업 비자로 일하면서 알게 된 노하우를 공유해드립니다. 취업 비자 준비와 한국 기업 문화 적응 팁을 알려드려요.</p>
+                                    <a href="#" class="btn custom-btn">팁 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="card influencer-card">
+                                <img src="images/influencer3.jpg" alt="Coramfluencer 3" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">이선영 Coramfluencer</h4>
+                                    <p class="card-text">영주권 취득 과정과 영주권자로서의 삶에 대해 이야기합니다. 한국에서 장기 거주를 계획하신다면 참고해 보세요.</p>
+                                    <a href="#" class="btn custom-btn">팁 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-10 me-auto mb-4">
+                        <h4 class="text-white mb-3"><a href="index.html">Coram<span>Mate</span></a></h4>
+                        <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2023 CoramMate
+                        <br>Custom template by <a href="https://www.tooplate.com/">Tooplate</a></p>
+                    </div>
+                    <div class="col-lg-5 col-8">
+                        <h5 class="text-white mb-3">Sitemap</h5>
+                        <ul class="footer-menu d-flex flex-wrap">
+                            <li class="footer-menu-item">
+                                <a href="about.html" class="footer-menu-link">About</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a href="services.html" class="footer-menu-link">Services</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a href="community.html" class="footer-menu-link">Community</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a href="contact.html" class="footer-menu-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-4">
+                        <h5 class="text-white mb-3">Social</h5>
+                        <ul class="social-icon">
+                            <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+                            <li><a href="#" class="social-icon-link bi-whatsapp"></a></li>
+                            <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+                            <li><a href="#" class="social-icon-link bi-skype"></a></li>
+                            </ul>
+                            </div>
+                            </div>
+                            </div>
+                            </footer>
+
+                            <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>
+```

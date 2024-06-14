@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>CoramMate - Education Information Service</title>
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/slick.css"/>
+        <link href="css/tooplate-little-fashion.css" rel="stylesheet">
+        <style>
+            .education-hero {
+                background-image: url('images/education-bg.jpg');
+                background-size: cover;
+                background-position: center;
+                height: 500px;
+                display: flex;
+                align-items: center;
+            }
+            .education-hero h1 {
+                color: #fff;
+                font-size: 48px;
+                font-weight: 700;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .education-hero p {
+                color: #fff;
+                font-size: 24px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .category-card {
+                border: none;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+            .category-card:hover {
+                transform: translateY(-5px);
+            }
+            .category-card img {
+                height: 200px;
+                object-fit: cover;
+            }
+            .category-card .card-body {
+                padding: 20px;
+            }
+            .category-card .card-title {
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            .category-card .card-text {
+                font-size: 16px;
+                color: #666;
+            }
+            .helper-card {
+                border: none;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+            .helper-card:hover {
+                transform: translateY(-5px);
+            }
+            .helper-card img {
+                height: 200px;
+                object-fit: cover;
+            }
+            .helper-card .card-body {
+                padding: 20px;
+            }
+            .helper-card .card-title {
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            .helper-card .card-text {
+                font-size: 16px;
+                color: #666;
+            }
+            .influencer-card {
+                border: none;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+            .influencer-card:hover {
+                transform: translateY(-5px);
+            }
+            .influencer-card img {
+                height: 200px;
+                object-fit: cover;
+            }
+            .influencer-card .card-body {
+                padding: 20px;
+            }
+            .influencer-card .card-title {
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            .influencer-card .card-text {
+                font-size: 16px;
+                color: #666;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <section class="preloader">
+            <div class="spinner">
+                <span class="sk-inner-circle"></span>
+            </div>
+        </section>
+    
+        <main>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <strong>Coram<span>Mate</span></strong>
+                    </a>
+                    <div class="d-lg-none">
+                        <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="community.html">Community</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                        <div class="d-none d-lg-block">
+                            <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
+            <section class="education-hero">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h1>교육 관련 정보 서비스</h1>
+                            <p>CoramMate와 함께 한국에서의 교육 정보를 확인하세요!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h2 class="mb-5">교육 분야별 정보</h2>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card category-card">
+                                <img src="images/language-school.jpg" alt="어학당" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">어학당</h4>
+                                    <p class="card-text">한국어 학습을 위한 어학당 정보와 수강 후기를 확인해보세요.</p>
+                                    <a href="#" class="btn custom-btn">더 알아보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card category-card">
+                                <img src="images/university.jpg" alt="대학교" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">대학교</h4>
+                                    <p class="card-text">한국 대학교 입학 정보와 유학생 지원 프로그램을 알아보세요.</p>
+                                    <a href="#" class="btn custom-btn">더 알아보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card category-card">
+                                <img src="images/vocational-school.jpg" alt="직업학교" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">직업학교</h4>
+                                    <p class="card-text">실무 기술을 배울 수 있는 직업학교 정보를 확인하세요.</p>
+                                    <a href="#" class="btn custom-btn">더 알아보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card category-card">
+                                <img src="images/international-school.jpg" alt="국제학교" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">국제학교</h4>
+                                    <p class="card-text">자녀를 위한 국제학교 선택 가이드와 입학 정보를 제공합니다.</p>
+                                    <a href="#" class="btn custom-btn">더 알아보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="card category-card">
+                                <img src="images/extracurricular.jpg" alt="과외 및 방과후 활동" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">과외 및 방과후 활동</h4>
+                                    <p class="card-text">1:1 과외, 예체능 학원 등 다양한 방과후 활동 정보를 모았습니다.</p>
+                                    <a href="#" class="btn custom-btn">더 알아보기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section-padding bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h2 class="mb-5">교육 도우미를 만나보세요</h2>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card helper-card">
+                                <img src="images/education-consultant.jpg" alt="유학 컨설턴트" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">김지영 유학 컨설턴트</h4>
+                                    <p class="card-text">한국 유학 준비부터 입학까지 전 과정을 도와드립니다.</p>
+                                    <a href="#" class="btn custom-btn">프로필 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card helper-card">
+                                <img src="images/language-tutor.jpg" alt="언어 튜터" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">이민수 한국어 튜터</h4>
+                                    <p class="card-text">1:1 맞춤형 한국어 과외로 실력 향상을 도와드립니다.</p>
+                                    <a href="#" class="btn custom-btn">프로필 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="card helper-card">
+                                <img src="images/school-coordinator.jpg" alt="학교 코디네이터" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">박선영 국제학교 코디네이터</h4>
+                                    <p class="card-text">국제학교 입학 절차와 준비 사항을 안내해드립니다.</p>
+                                    <a href="#" class="btn custom-btn">프로필 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h2 class="mb-5">Coramfluencer의 교육 이야기</h2>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card influencer-card">
+                                <img src="images/influencer1.jpg" alt="Coramfluencer 1" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">김민지 Coramfluencer</h4>
+                                    <p class="card-text">한국 대학교 입학 준비 과정과 유학 생활에 대한 이야기를 들려드립니다.</p>
+                                    <a href="#" class="btn custom-btn">블로그 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card influencer-card">
+                                <img src="images/influencer2.jpg" alt="Coramfluencer 2" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">최영진 Coramfluencer</h4>
+                                    <p class="card-text">한국에서 직업 교육을 받은 경험을 바탕으로 실무 기술 습득 팁을 공유합니다.</p>
+                                    <a href="#" class="btn custom-btn">영상 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="card influencer-card">
+                                <img src="images/influencer3.jpg" alt="Coramfluencer 3" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">이은주 Coramfluencer</h4>
+                                    <p class="card-text">자녀를 한국 국제학교에 보내는 부모님들을 위한 정보와 조언을 제공합니다.</p>
+                                    <a href="#" class="btn custom-btn">포스트 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-10 me-auto mb-4">
+                        <h4 class="text-white mb-3"><a href="index.html">Coram<span>Mate</span></a></h4>
+                        <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2023 CoramMate
+                        <br>Custom template by <a href="https://www.tooplate.com/">Tooplate</a></p>
+                    </div>
+                    <div class="col-lg-5 col-8">
+                        <h5 class="text-white mb-3">Sitemap</h5>
+                        <ul class="footer-menu d-flex flex-wrap">
+                            <li class="footer-menu-item">
+                                <a href="about.html" class="footer-menu-link">About</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a href="services.html" class="footer-menu-link">Services</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a href="community.html" class="footer-menu-link">Community</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a href="contact.html" class="footer-menu-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-4">
+                        <h5 class="text-white mb-3">Social</h5>
+                        <ul class="social-icon">
+                            <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+                            <li><a href="#" class="social-icon-link bi-whatsapp"></a></li>
+                            <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+                            <li><a href="#" class="social-icon-link bi-skype"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/Headroom.js"></script>
+        <script src="js/jQuery.headroom.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+    </html>
+```

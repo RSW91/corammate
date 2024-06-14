@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>CoramMate - Korean Culture Experience</title>
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/slick.css"/>
+        <link href="css/tooplate-little-fashion.css" rel="stylesheet">
+        <style>
+            .experience-hero {
+                background-image: url('images/experience-bg.jpg');
+                background-size: cover;
+                background-position: center;
+                height: 500px;
+                display: flex;
+                align-items: center;
+            }
+            .experience-hero h1 {
+                color: #fff;
+                font-size: 48px;
+                font-weight: 700;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .experience-hero p {
+                color: #fff;
+                font-size: 24px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .experience-item {
+                position: relative;
+                overflow: hidden;
+            }
+            .experience-item img {
+                transition: transform 0.3s ease;
+            }
+            .experience-item:hover img {
+                transform: scale(1.1);
+            }
+            .experience-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.6);
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+            .experience-item:hover .experience-overlay {
+                opacity: 1;
+            }
+            .experience-overlay h3 {
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            .experience-overlay p {
+                font-size: 16px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <section class="preloader">
+            <div class="spinner">
+                <span class="sk-inner-circle"></span>
+            </div>
+        </section>
+    
+        <main>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <strong>Coram<span>Mate</span></strong>
+                    </a>
+                    <div class="d-lg-none">
+                        <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="community.html">Community</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                        <div class="d-none d-lg-block">
+                            <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
+            <section class="experience-hero">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h1>한국 문화 체험</h1>
+                            <p>CoramMate와 함께 한국 문화를 직접 체험해보세요!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h2 class="mb-5">다양한 한국 문화 체험 프로그램</h2>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="experience-item">
+                                <img src="images/hanbok.jpg" alt="한복 체험" class="img-fluid">
+                                <div class="experience-overlay">
+                                    <h3>한복 체험</h3>
+                                    <p>아름다운 한복을 입어보고 전통 문화를 느껴보세요.</p>
+                                    <a href="#" class="btn custom-btn">체험하기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="experience-item">
+                                <img src="images/cooking.jpg" alt="한식 요리 체험" class="img-fluid">
+                                <div class="experience-overlay">
+                                    <h3>한식 요리 체험</h3>
+                                    <p>전문 셰프와 함께 한국 음식을 직접 만들어보세요.</p>
+                                    <a href="#" class="btn custom-btn">체험하기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="experience-item">
+                                <img src="images/tea-ceremony.jpg" alt="다도 체험" class="img-fluid">
+                                <div class="experience-overlay">
+                                    <h3>다도 체험</h3>
+                                    <p>한국 전통 다도를 배우고 차와 함께 마음의 평화를 느껴보세요.</p>
+                                    <a href="#" class="btn custom-btn">체험하기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="experience-item">
+                                <img src="images/calligraphy.jpg" alt="서예 체험" class="img-fluid">
+                                <div class="experience-overlay">
+                                    <h3>서예 체험</h3>
+                                    <p>한국 전통 서예의 아름다움을 직접 체험해보세요.</p>
+                                    <a href="#" class="btn custom-btn">체험하기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="experience-item">
+                                <img src="images/k-pop.jpg" alt="K-Pop 댄스 체험" class="img-fluid">
+                                <div class="experience-overlay">
+                                    <h3>K-Pop 댄스 체험</h3>
+                                    <p>최신 K-Pop 댄스를 전문 댄서에게 배워보세요.</p>
+                                    <a href="#" class="btn custom-btn">체험하기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="experience-item">
+                                <img src="images/temple-stay.jpg" alt="템플스테이" class="img-fluid">
+                                <div class="experience-overlay">
+                                    <h3>템플스테이</h3>
+                                    <p>한국의 전통 사찰에서 마음의 평화를 찾아보세요.</p>
+                                    <a href="#" class="btn custom-btn">체험하기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section-padding bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h2 class="mb-5">Coramfluencer와 함께하는 문화 체험</h2>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card shadow">
+                                <img src="images/influencer1.jpg" alt="Coramfluencer 1" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">김지영 Coramfluencer</h4>
+                                    <p class="card-text">서울 한복 체험 프로그램을 운영하고 있습니다. 전통 한복을 입고 경복궁 투어를 함께 해요!</p>
+                                    <a href="#" class="btn custom-btn">체험 신청</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card shadow">
+                                <img src="images/influencer2.jpg" alt="Coramfluencer 2" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">박민수 Coramfluencer</h4>
+                                    <p class="card-text">전주에서 한식 요리 체험 클래스를 진행하고 있어요. 비빔밥과 한정식을 만들어 볼까요?</p>
+                                    <a href="#" class="btn custom-btn">체험 신청</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card shadow">
+                                <img src="images/influencer3.jpg" alt="Coramfluencer 3" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">이선영 Coramfluencer</h4>
+                                    <p class="card-text">인사동에서 전통 다도 체험을 진행합니다. 차 한 잔의 여유와 멋을 느껴보세요.</p>
+                                    <a href="#" class="btn custom-btn">체험 신청</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-10 me-auto mb-4">
+                        <h4 class="text-white mb-3"><a href="index.html">Coram<span>Mate</span></a></h4>
+                        <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2023 CoramMate
+                        <br>Custom template by <a href="https://www.tooplate.com/">Tooplate</a></p>
+                    </div>
+                    <div class="col-lg-5 col-8">
+                        <h5 class="text-white mb-3">Sitemap</h5>
+                        <ul class="footer-menu d-flex flex-wrap">
+                            <li class="footer-menu-item">
+                                <a href="about.html" class="footer-menu-link">About</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a href="services.html" class="footer-menu-link">Services</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a href="community.html" class="footer-menu-link">Community</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a href="contact.html" class="footer-menu-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-4">
+                        <h5 class="text-white mb-3">Social</h5>
+                        <ul class="social-icon">
+                            <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+                            <li><a href="#" class="social-icon-link bi-whatsapp"></a></li>
+                            <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+                            <li><a href="#" class="social-icon-link bi-skype"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+         <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>
+```

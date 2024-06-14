@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoramMate - Korean Culture Class</title>
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/slick.css"/>
+    <link href="css/tooplate-little-fashion.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/leaflet.css"> <!-- Leaflet CSS 추가 -->
+    <style>
+        /* Custom Styles */
+        #map {
+            height: 500px;
+            margin-bottom: 20px;
+        }
+        .fluencer-card {
+            margin-bottom: 20px;
+        }
+        .custom-btn {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/leaflet.js"></script> <!-- Leaflet JS 추가 -->
+</head>
+<body>
+    <section class="preloader">
+        <div class="spinner">
+            <span class="sk-inner-circle"></span>
+        </div>
+    </section>
+
+    <main>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <strong>Coram<span>Mate</span></strong>
+                </a>
+                <div class="d-lg-none">
+                    <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="community.html">Community</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="d-none d-lg-block">
+                        <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <section class="culture-hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h1>한국 문화 강좌</h1>
+                        <p>CoramMate와 함께 한국 문화의 매력에 빠져보세요!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="mb-5">오프라인 서비스</h2>
+                    </div>
+                    <div id="map" class="col-12"></div>
+                    <div id="fluencers" class="row mt-4"></div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="mb-5">온라인 서비스</h2>
+                    </div>
+                    <!-- 예시 온라인 서비스 -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="images/online-service.jpg" class="card-img-top" alt="Online Service">
+                            <div class="card-body">
+                                <h5 class="card-title">온라인 한국 요리 클래스</h5>
+                                <p class="card-text">집에서 전통 한국 요리를 배우세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 필요한 만큼 온라인 서비스 추가 -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-10 me-auto mb-4">
+                    <h4 class="text-white mb-3"><a href="index.html">Coram<span>Mate</span></a></h4>
+                    <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2023 CoramMate
+                    <br>Custom template by <a href="https://www.tooplate.com/">Tooplate</a></p>
+                </div>
+                <div class="col-lg-5 col-8">
+                    <h5 class="text-white mb-3">Sitemap</h5>
+                    <ul class="footer-menu d-flex flex-wrap">
+                        <li class="footer-menu-item">
+                            <a href="about.html" class="footer-menu-link">About</a>
+                        </li>
+                        <li class="footer-menu-item">
+                            <a href="services.html" class="footer-menu-link">Services</a>
+                        </li>
+                        <li class="footer-menu-item">
+                            <a href="community.html" class="footer-menu-link">Community</a>
+                        </li>
+                        <li class="footer-menu-item">
+                            <a href="contact.html" class="footer-menu-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-4">
+                    <h5 class="text-white mb-3">Social</h5>
+                    <ul class="social-icon">
+                        <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+                        <li><a href="#" class="social-icon-link bi-whatsapp"></a></li>
+                        <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+                        <li><a href="#" class="social-icon-link bi-skype"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 지도 초기화 및 설정
+        document.addEventListener('DOMContentLoaded', () => {
+            const map = L.map('map').setView([37.5665, 126.9780], 11); // 서울 중심
+
+            // OpenStreetMap 타일 추가
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // 지역 및 CoramFluencers 데이터 정의
+            const regions = {
+                'gangnam': { lat: 37.4979, lng: 127.0276, fluencers: [
+                    { id: 1, name: 'John Doe', photo: 'john.jpg', intro: 'Gangnam housing expert.', story: 'John\'s full story...', services: 'Service A: $100, Service B: $150' },
+                    { id: 2, name: 'Jane Smith', photo: 'jane.jpg', intro: 'Expert in Gangnam real estate.', story: 'Jane\'s full story...', services: 'Service C: $200, Service D: $250' }
+                ]},
+                'yongsan': { lat: 37.5326, lng: 126.9903, fluencers: [
+                    { id: 3, name: 'Michael Lee', photo: 'michael.jpg', intro: 'Yongsan housing expert.', story: 'Michael\'s full story...', services: 'Service E: $300, Service F: $350' },
+                    { id: 4, name: 'Sarah Park', photo: 'sarah.jpg', intro: 'Yongsan property specialist.', story: 'Sarah\'s full story...', services: 'Service G: $400, Service H: $450' }
+                ]},
+                'seocho': { lat: 37.4836, lng: 127.0327, fluencers: [
+                    { id: 5, name: 'Anna Kim', photo: 'anna.jpg', intro: 'Seocho housing expert.', story: 'Anna\'s full story...', services: 'Service I: $500, Service J: $550' },
+                    { id: 6, name: 'David Lee', photo: 'david.jpg', intro: 'Experienced in Seocho real estate.', story: 'David\'s full story...', services: 'Service K: $600, Service L: $650' }
+                ]}
+            };
+
+            // 각 지역에 클릭 가능한 마커 추가
+            for (const [region, data] of Object.entries(regions)) {
+                const marker = L.marker([data.lat, data.lng]).addTo(map)
+                    .bindPopup(region)
+                    .on('click', () => showFluencers(region, data.fluencers));
+            }
+
+            function showFluencers(region, fluencers) {
+                const container = document.getElementById('fluencers');
+                container.innerHTML = ''; // 이전 항목 지우기
+
+                // Fluencers 정보 표시
+                fluencers.forEach(fluencer => {
+                    const card = document.createElement('div');
+                    card.className = 'col-md-4 fluencer-card';
+                    card.innerHTML = `
+                        <div class="card">
+                            <img src="images/${fluencer.photo}" class="card-img-top" alt="${fluencer.name}">
+                            <div class="card-body">
+                                <h5 class="card-title">${fluencer.name}</h5>
+                                <p class="card-text">${fluencer.intro}</p>
+                                <a href="fluencer-details.html?id=${fluencer.id}" class="btn custom-btn">프로필 보기</a>
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

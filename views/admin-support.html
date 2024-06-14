@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>CoramMate - Administrative Procedure Support</title>
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/slick.css"/>
+        <link href="css/tooplate-little-fashion.css" rel="stylesheet">
+        <style>
+            .admin-hero {
+                background-image: url('images/admin-bg.jpg');
+                background-size: cover;
+                background-position: center;
+                height: 500px;
+                display: flex;
+                align-items: center;
+            }
+            .admin-hero h1 {
+                color: #fff;
+                font-size: 48px;
+                font-weight: 700;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .admin-hero p {
+                color: #fff;
+                font-size: 24px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .procedure-card {
+                border: none;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+            .procedure-card:hover {
+                transform: translateY(-5px);
+            }
+            .procedure-card img {
+                height: 200px;
+                object-fit: cover;
+            }
+            .procedure-card .card-body {
+                padding: 20px;
+            }
+            .procedure-card .card-title {
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            .procedure-card .card-text {
+                font-size: 16px;
+                color: #666;
+            }
+            .influencer-card {
+                border: none;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+            .influencer-card:hover {
+                transform: translateY(-5px);
+            }
+            .influencer-card img {
+                height: 200px;
+                object-fit: cover;
+            }
+            .influencer-card .card-body {
+                padding: 20px;
+            }
+            .influencer-card .card-title {
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            .influencer-card .card-text {
+                font-size: 16px;
+                color: #666;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <section class="preloader">
+            <div class="spinner">
+                <span class="sk-inner-circle"></span>
+            </div>
+        </section>
+    
+        <main>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <strong>Coram<span>Mate</span></strong>
+                    </a>
+                    <div class="d-lg-none">
+                        <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="community.html">Community</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                        <div class="d-none d-lg-block">
+                            <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
+            <section class="admin-hero">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h1>행정 절차 지원 서비스</h1>
+                            <p>CoramMate와 함께 한국에서의 행정 절차를 쉽고 빠르게 처리하세요!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h2 class="mb-5">주요 행정 절차 안내</h2>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card procedure-card">
+                                <img src="images/alien-registration.jpg" alt="외국인 등록" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">외국인 등록</h4>
+                                    <p class="card-text">한국에 90일 이상 체류하는 외국인은 외국인 등록을 해야 합니다. 등록 절차와 필요 서류를 안내해드려요.</p>
+                                    <a href="#" class="btn custom-btn">자세히 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card procedure-card">
+                                <img src="images/tax-payment.jpg" alt="세금 납부" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">세금 납부</h4>
+                                    <p class="card-text">한국에서 발생한 소득에 대해서는 세금을 납부해야 합니다. 세금 신고 및 납부 방법을 알려드려요.</p>
+                                    <a href="#" class="btn custom-btn">자세히 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card procedure-card">
+                                <img src="images/health-insurance.jpg" alt="건강보험 가입" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">건강보험 가입</h4>
+                                    <p class="card-text">한국에 장기 체류하는 외국인은 건강보험에 가입해야 합니다. 가입 대상 및 절차를 안내해드려요.</p>
+                                    <a href="#" class="btn custom-btn">자세히 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card procedure-card">
+                                <img src="images/driver-license.jpg" alt="운전면허증 취득" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">운전면허증 취득</h4>
+                                    <p class="card-text">한국에서 운전을 하려면 한국 운전면허증이 필요합니다. 외국 면허증 교환 및 필기/실기 시험 절차를 소개해드려요.</p>
+                                    <a href="#" class="btn custom-btn">자세히 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card procedure-card">
+                                <img src="images/marriage-registration.jpg" alt="혼인신고" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">혼인신고</h4>
+                                    <p class="card-text">한국인과 결혼한 외국인은 혼인신고를 해야 합니다. 구비 서류 및 신고 절차를 안내해드려요.</p>
+                                    <a href="#" class="btn custom-btn">자세히 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="card procedure-card">
+                                <img src="images/naturalization.jpg" alt="귀화 신청" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">귀화 신청</h4>
+                                    <p class="card-text">한국 국적을 취득하고 싶은 외국인은 귀화 신청을 할 수 있습니다. 귀화 요건 및 신청 절차를 알아보세요.</p>
+                                    <a href="#" class="btn custom-btn">자세히 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section-padding bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h2 class="mb-5">Coramfluencer의 행정 절차 경험담</h2>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card influencer-card">
+                                <img src="images/influencer1.jpg" alt="Coramfluencer 1" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">김지영 Coramfluencer</h4>
+                                    <p class="card-text">외국인 등록 및 체류 자격 변경 절차를 경험했어요. 필요한 서류 준비와 심사 과정에 대해 알려드릴게요!</p>
+                                    <a href="#" class="btn custom-btn">더 알아보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card influencer-card">
+                                <img src="images/influencer2.jpg" alt="Coramfluencer 2" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">박민수 Coramfluencer</h4>
+                                    <p class="card-text">한국에서 세금 신고를 해본 경험이 있어요. 세금 납부 시기와 방법, 주의할 점 등을 공유해드리겠습니다.</p>
+                                    <a href="#" class="btn custom-btn">더 알아보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="card influencer-card">
+                                <img src="images/influencer3.jpg" alt="Coramfluencer 3" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">이선영 Coramfluencer</h4>
+                                    <p class="card-text">한국에서 운전면허증을 취득한 경험을 공유합니다. 필기/실기 시험 준비 팁과 주의사항을 알려드려요.</p>
+                                    <a href="#" class="btn custom-btn">더 알아보기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-10 me-auto mb-4">
+                        <h4 class="text-white mb-3"><a href="index.html">Coram<span>Mate</span></a></h4>
+                        <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2023 CoramMate
+                        <br>Custom template by <a href="https://www.tooplate.com/">Tooplate</a></p>
+                    </div>
+                    <div class="col-lg-5 col-8">
+                        <h5 class="text-white mb-3">Sitemap</h5>
+                        <ul class="footer-menu d-flex flex-wrap">
+                            <li class="footer-menu-item">
+                                <a href="about.html" class="footer-menu-link">About</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a href="services.html" class="footer-menu-link">Services</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a href="community.html" class="footer-menu-link">Community</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a href="contact.html" class="footer-menu-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-4">
+                        <h5 class="text-white mb-3">Social</h5>
+                        <ul class="social-icon">
+                            <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+                            <li><a href="#" class="social-icon-link bi-whatsapp"></a></li>
+                            <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+                            <li><a href="#" class="social-icon-link bi-skype"></a></li>
+                            </ul>
+                            </div>
+                            </div>
+                            </div>
+                            </footer>
+
+                            <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>
+```

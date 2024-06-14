@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>CoramMate - Medical Information Service</title>
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/slick.css"/>
+        <link href="css/tooplate-little-fashion.css" rel="stylesheet">
+        <style>
+            .medical-hero {
+                background-image: url('images/medical-bg.jpg');
+                background-size: cover;
+                background-position: center;
+                height: 500px;
+                display: flex;
+                align-items: center;
+            }
+            .medical-hero h1 {
+                color: #fff;
+                font-size: 48px;
+                font-weight: 700;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .medical-hero p {
+                color: #fff;
+                font-size: 24px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .map-container {
+                position: relative;
+                width: 100%;
+                padding-bottom: 56.25%; /* 16:9 비율 */
+                height: 0;
+            }
+            .map-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .helper-card {
+                border: none;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+            .helper-card:hover {
+                transform: translateY(-5px);
+            }
+            .helper-card img {
+                height: 200px;
+                object-fit: cover;
+            }
+            .helper-card .card-body {
+                padding: 20px;
+            }
+            .helper-card .card-title {
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            .helper-card .card-text {
+                font-size: 16px;
+                color: #666;
+            }
+            .influencer-card {
+                border: none;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+            .influencer-card:hover {
+                transform: translateY(-5px);
+            }
+            .influencer-card img {
+                height: 200px;
+                object-fit: cover;
+            }
+            .influencer-card .card-body {
+                padding: 20px;
+            }
+            .influencer-card .card-title {
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            .influencer-card .card-text {
+                font-size: 16px;
+                color: #666;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <section class="preloader">
+            <div class="spinner">
+                <span class="sk-inner-circle"></span>
+            </div>
+        </section>
+    
+        <main>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <strong>Coram<span>Mate</span></strong>
+                    </a>
+                    <div class="d-lg-none">
+                        <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="community.html">Community</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                        <div class="d-none d-lg-block">
+                            <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
+            <section class="medical-hero">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h1>의료 정보 안내 서비스</h1>
+                            <p>CoramMate와 함께 한국에서의 의료 서비스를 편리하게 이용하세요!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h2 class="mb-5">의료 도우미를 찾아보세요</h2>
+                        </div>
+                        <div class="col-lg-8 mx-auto">
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202408.3380024406!2d126.83542465144543!3d37.564341336904906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2012d5c39cf%3A0x7e11eca1405bf29b!2sSeoul!5e0!3m2!1sen!2skr!4v1622687944940!5m2!1sen!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                                    <div class="card helper-card">
+                                        <img src="images/doctor.jpg" alt="의사" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4 class="card-title">이영호 의사</h4>
+                                            <p class="card-text">서울대학교 병원 내과 전문의로 10년 이상 외국인 진료 경험이 있습니다.</p>
+                                            <a href="#" class="btn custom-btn">프로필 보기</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                                    <div class="card helper-card">
+                                        <img src="images/nurse.jpg" alt="간호사" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4 class="card-title">김민지 간호사</h4>
+                                            <p class="card-text">세브란스 병원에서 근무 중이며, 영어와 중국어로 의사소통이 가능합니다.</p>
+                                            <a href="#" class="btn custom-btn">프로필 보기</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                                    <div class="card helper-card">
+                                        <img src="images/interpreter.jpg" alt="의료 통역사" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4 class="card-title">박지현 의료 통역사</h4>
+                                            <p class="card-text">전문 의료 통역사로 영어, 일본어, 러시아어 통역이 가능합니다.</p>
+                                            <a href="#" class="btn custom-btn">프로필 보기</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="card helper-card">
+                                        <img src="images/coordinator.jpg" alt="의료 코디네이터" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4 class="card-title">최은주 의료 코디네이터</h4>
+                                            <p class="card-text">외국인 환자를 위한 병원 예약, 수속, 입퇴원 안내 등을 도와드립니다.</p>
+                                            <a href="#" class="btn custom-btn">프로필 보기</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section-padding bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h2 class="mb-5">Coramfluencer의 의료 정보</h2>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card influencer-card">
+                                <img src="images/influencer1.jpg" alt="Coramfluencer 1" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">김지영 Coramfluencer</h4>
+                                    <p class="card-text">한국에서 의료 서비스를 받은 경험을 바탕으로 외국인 친구들에게 유용한 정보를 전해드리고 있어요.</p>
+                                    <a href="#" class="btn custom-btn">블로그 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="card influencer-card">
+                                <img src="images/influencer2.jpg" alt="Coramfluencer 2" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">이민수 Coramfluencer</h4>
+                                    <p class="card-text">외국인 친구들이 자주 겪는 건강 문제와 예방법에 대해 알려드리는 영상을 제작하고 있습니다.</p>
+                                    <a href="#" class="btn custom-btn">영상 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="card influencer-card">
+                                <img src="images/influencer3.jpg" alt="Coramfluencer 3" class="card-img-top">
+                                <div class="card-body">
+                                    <h4 class="card-title">박선영 Coramfluencer</h4>
+                                    <p class="card-text">한국의 건강보험 제도와 외국인 환자를 위한 병원 이용 팁을 소개합니다.</p>
+                                    <a href="#" class="btn custom-btn">포스트 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-10 me-auto mb-4">
+                        <h4 class="text-white mb-3"><a href="index.html">Coram<span>Mate</span></a></h4>
+                        <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2023 CoramMate
+                        <br>Custom template by <a href="https://www.tooplate.com/">Tooplate</a></p>
+                    </div>
+                    <div class="col-lg-5 col-8">
+                        <h5 class="text-white mb-3">Sitemap</h5>
+                        <ul class="footer-menu d-flex flex-wrap">
+                            <li class="footer-menu-item">
+                                <a href="about.html" class="footer-menu-link">About</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a href="services.html" class="footer-menu-link">Services</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a href="community.html" class="footer-menu-link">Community</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a href="contact.html" class="footer-menu-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-4">
+                        <h5 class="text-white mb-3">Social</h5>
+                        <ul class="social-icon">
+                            <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+                            <li><a href="#" class="social-icon-link bi-whatsapp"></a></li>
+                            <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+                            <li><a href="#" class="social-icon-link bi-skype"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>
+```
