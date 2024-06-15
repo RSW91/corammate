@@ -31,7 +31,6 @@ jobs:
       run: |
         mkdir -p ~/.ssh
         ssh-keygen -t rsa -b 3072 -f ~/.ssh/google_compute_engine -N ""
-        ssh-keyscan -H compute.4819460136827873104 >> ~/.ssh/known_hosts
 
     - name: Deploy to Google Compute Engine
       run: |
