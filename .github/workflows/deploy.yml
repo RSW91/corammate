@@ -22,6 +22,7 @@ jobs:
       uses: google-github-actions/setup-gcloud@v1
       with:
         project_id: corammate
+        install_components: gcloud
 
     - name: Deploy to Google Compute Engine
       run: |
