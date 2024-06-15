@@ -10,21 +10,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2  # 업데이트된 Node.js 버전을 사용하는 최신 버전으로 변경
 
-      - name: Setup Cloud SDK
-        uses: google-github-actions/setup-gcloud@v1
-        with:
-          project_id: ${{ secrets.GCP_PROJECT_ID }}
-          service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+    - name: Authenticate to Google Cloud
+      id: 'auth'
+      uses: google-github-actions/auth@v1  # Google Cloud 인증을 위한 최신 버전 사용
+      with:
+        credentials_json: '${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}'
 
-      - name: Authenticate with gcloud
-        uses: google-github-actions/auth@v1
-        with:
-          credentials_json: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+    - name: Setup Cloud SDK
+      uses: google-github-actions/setup-gcloud@v1  # 최신 버전으로 변경
+      with:
+        project_id: corammate
+        export_default_credentials: true
 
-      - name: Deploy to Google Compute Engine
-        run: |
-          gcloud config set project ${{ secrets.GCP_PROJECT_ID }}
-          gcloud compute ssh corammate-server --zone asia-northeast3-a --command "cd /home/ryusw91rt/corammate && git pull origin master && sudo systemctl restart nginx"
+    - name: Deploy to Google Compute Engine
+      run: |
+        gcloud config set project corammate
+        gcloud compute ssh corammate-server --zone asia-northeast3-a --command "cd /home/ryusw91rt/corammate && git pull origin master && npm install && pm2 restart all"
