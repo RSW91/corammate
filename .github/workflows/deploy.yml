@@ -32,4 +32,4 @@ jobs:
     - name: Deploy to Google Compute Engine
       run: |
         gcloud config set project corammate
-        gcloud compute ssh corammate-server --zone asia-northeast3-a --command "git config --global --add safe.directory /home/ryusw91rt/corammate && cd /home/ryusw91rt/corammate && git pull origin master && sudo systemctl restart nginx"
+        gcloud compute ssh corammate-server --zone asia-northeast3-a --command "sudo chown -R $USER:$USER /home/ryusw91rt/corammate && cd /home/ryusw91rt/corammate && git config --global --add safe.directory /home/ryusw91rt/corammate && sudo git pull origin master && sudo systemctl restart nginx"
