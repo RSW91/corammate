@@ -1,0 +1,26 @@
+name: Deploy to Google Cloud
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup Cloud SDK
+      uses: google-github-actions/setup-gcloud@master
+      with:
+        project_id: corammate  
+        service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+        export_default_credentials: true
+
+    - name: Deploy to Google Compute Engine
+      run: |
+        gcloud config set project corammate  # Google Cloud 프로젝트 ID
+        gcloud compute ssh corammate-server --zone asia-northeast3-a --command "cd /home/ryusw91rt/corammate && git pull origin master && npm install && sudo systemctl restart nginx"
