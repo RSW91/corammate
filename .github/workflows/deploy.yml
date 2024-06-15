@@ -27,7 +27,11 @@ jobs:
     - name: Configure git safe directory
       run: git config --global --add safe.directory /home/ryusw91rt/corammate
 
+    - name: Generate SSH Key
+      run: |
+        ssh-keygen -t rsa -f ~/.ssh/google_compute_engine -C user -q -N ""
+
     - name: Deploy to Google Compute Engine
       run: |
         gcloud config set project corammate
-        yes | gcloud compute ssh corammate-server --zone asia-northeast3-a --command "cd /home/ryusw91rt/corammate && git pull origin master && sudo systemctl restart nginx"
+        gcloud compute ssh corammate-server --zone asia-northeast3-a --command "cd /home/ryusw91rt/corammate && git pull origin master && sudo systemctl restart nginx"
