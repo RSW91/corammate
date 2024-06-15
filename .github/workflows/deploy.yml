@@ -14,13 +14,13 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Setup Cloud SDK
-      uses: google-github-actions/setup-gcloud@master
+      uses: google-github-actions/setup-gcloud@v1
       with:
-        project_id: corammate  
+        project_id: corammate
         service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
         export_default_credentials: true
 
     - name: Deploy to Google Compute Engine
       run: |
         gcloud config set project corammate  # Google Cloud 프로젝트 ID
-        gcloud compute ssh corammate-server --zone asia-northeast3-a --command "cd /home/ryusw91rt/corammate && git pull origin master && npm install && sudo systemctl restart nginx"
+        gcloud compute ssh corammate-server --zone asia-northeast3-a --command "cd /home/ryusw91rt/corammate && git pull origin master && sudo systemctl restart nginx"
