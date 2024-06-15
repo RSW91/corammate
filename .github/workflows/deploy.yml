@@ -25,11 +25,7 @@ jobs:
         install_components: gcloud
 
     - name: Configure git safe directory
-      run: git config --global --add safe.directory /home/ryusw91rt/corammate
-
-    - name: Generate SSH Key
-      run: |
-        ssh-keygen -t rsa -f ~/.ssh/google_compute_engine -C user -q -N ""
+      run: git config --global --add safe.directory /home/runner/work/corammate/corammate
 
     - name: Deploy to Google Compute Engine
       run: |
