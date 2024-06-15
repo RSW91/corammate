@@ -13,19 +13,16 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Setup Cloud SDK
-      uses: google-github-actions/setup-gcloud@v1
-      with:
-        project_id: corammate
-        service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
-        export_default_credentials: true
-
     - name: Authenticate to Google Cloud
       uses: google-github-actions/auth@v1
       with:
         credentials_json: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
 
+    - name: Setup Cloud SDK
+      uses: google-github-actions/setup-gcloud@v1
+      with:
+        project_id: corammate
+
     - name: Deploy to Google Compute Engine
       run: |
-        gcloud config set project corammate
         gcloud compute ssh corammate-server --zone asia-northeast3-a --command "cd /home/ryusw91rt/corammate && git pull origin master && sudo systemctl restart nginx"
