@@ -11,16 +11,16 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3  # Node.js 20을 사용하는 최신 버전으로 변경
+      uses: actions/checkout@v3
 
     - name: Authenticate to Google Cloud
       id: 'auth'
-      uses: google-github-actions/auth@v1  # Google Cloud 인증을 위한 최신 버전 사용
+      uses: google-github-actions/auth@v1
       with:
         credentials_json: '${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}'
 
     - name: Setup Cloud SDK
-      uses: google-github-actions/setup-gcloud@v1  # 최신 버전으로 변경
+      uses: google-github-actions/setup-gcloud@v1
       with:
         project_id: corammate
         install_components: 'gcloud'
