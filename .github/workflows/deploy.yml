@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2  # 업데이트된 Node.js 버전을 사용하는 최신 버전으로 변경
+      uses: actions/checkout@v3  # Node.js 20을 사용하는 최신 버전으로 변경
 
     - name: Authenticate to Google Cloud
       id: 'auth'
@@ -23,7 +23,7 @@ jobs:
       uses: google-github-actions/setup-gcloud@v1  # 최신 버전으로 변경
       with:
         project_id: corammate
-        export_default_credentials: true
+        install_components: 'gcloud'
 
     - name: Deploy to Google Compute Engine
       run: |
